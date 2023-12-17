@@ -45,6 +45,6 @@ Finalement, un brief project couvrant les sujets abordés ici permettra de valid
 
 ## [8 - Polymorphisme](./docs/8.md)
 
-## [9 - Architecture en couche](./docs/9.md)
+## [9 - Introduction à UML](./docs/9.md)
 
-## [10 - Conception avec UML](./docs/10.md)
+## [10 - Architecture en couche](./docs/10.md)
