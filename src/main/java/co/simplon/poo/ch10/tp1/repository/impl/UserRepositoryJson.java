@@ -6,7 +6,7 @@ import co.simplon.poo.ch10.tp1.utils.persistence.GenericRepository;
 
 public class UserRepositoryJson extends GenericRepository<User> implements UserRepository {
 
-	public UserRepositoryJson(String jsonFilePath) {
+	public UserRepositoryJson(String jsonFilePath) { //constructeur 
 		super(jsonFilePath);
 	}
 
@@ -22,7 +22,7 @@ public class UserRepositoryJson extends GenericRepository<User> implements UserR
 			}
 		*/		
 		
-		//Mieux avec des stream !!
+		//Mieux avec des stream !! le filter est la condition de filtrage
 		return this.retrieve().stream().filter(p->p.getLogin().equals(login)).findFirst().orElse(null);
 	}
 }

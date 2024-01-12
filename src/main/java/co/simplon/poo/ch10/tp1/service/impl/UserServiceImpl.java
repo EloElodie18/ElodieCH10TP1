@@ -13,8 +13,8 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public void changeMyPassword(String userId, String oldPass, String newPass) throws Exception {
-		User targetUser = users.getById(userId);
+	public void changeMyPassword(String userId, String oldPass, String newPass) throws Exception { //j'appelle la methode concernée
+		User targetUser = users.getById(userId); 
 
 		// Pourquoi ce n'est pas safe de faire comme çà, avec le mot de passe en clair
 		// ????? Comment devra t-on faire plus tard ?
@@ -26,8 +26,13 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public void changeMyEmail(String userId, String newEmail) {
-		// TODO Auto-generated method stub
+	public void changeMyEmail(String userId, String oldEmail, String newEmail) throws Exception {
+		User targeUser = users.getById(userId);
+		if (targeUser.getEmail().equals(oldEmail)) {
+			targeUser.setEmail(newEmail);
+			users.update(targeUser, userId);
+		} else
+			throw new Exception ("bad old Email");
 	}
 
 }

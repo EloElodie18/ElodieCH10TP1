@@ -13,13 +13,10 @@ import lombok.ToString;
 @EqualsAndHashCode(callSuper = false)
 @AllArgsConstructor
 @NoArgsConstructor
-public class User extends BaseEntity{	
-	@NonNull //qd tu créer l'instance tu ne peux pas ne rien mettre
-	private String login;
+
+public class Product extends BaseEntity {
 	@NonNull
-	private String password;
+private Integer prix;
 	@NonNull
-	private String email;
-	
-	private boolean enable;
+private String login;
 }

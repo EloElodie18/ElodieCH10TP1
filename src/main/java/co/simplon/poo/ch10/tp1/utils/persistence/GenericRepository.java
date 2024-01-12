@@ -18,7 +18,8 @@ public abstract class GenericRepository<T extends BaseEntity> implements CrudRep
 	protected final String dataFilePath;
 	private static final ObjectMapper objectMapper = new ObjectMapper();
 
-	public GenericRepository(String dataFilePath) {
+	public GenericRepository(String dataFilePath) { 
+		/*Le constructeur prend le chemin du fichier de données en paramètre, vérifie si le fichier existe, puis charge les données du fichier s'il existe.*/
 		this.dataFilePath = dataFilePath;		
 		File file = new File(dataFilePath);
 		if (file.exists()) {
